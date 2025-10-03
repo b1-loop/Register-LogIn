@@ -42,7 +42,7 @@ namespace Register_LogIn
             //Programmet fortsätter tills användaren väljer att avsluta.
 
             //var account = new Account();
-            var fortsatt = true;
+            var fortsatt = true; // man kör programet tills användare väljer att avsluta
             var account = new Account();
 
             while (fortsatt)
@@ -52,10 +52,10 @@ namespace Register_LogIn
 
                 switch (alternativ)
                 {
-                    case "1":
-                        Console.WriteLine("Välj anvädare namn");
+                    case "1": // här reggar vi användare och sparar man måste uppfylla visa krav
+                        Console.WriteLine("Ange ditt nya anvädare namn");
                         var userName = Console.ReadLine();
-                        Console.WriteLine("Välj Lösenord");
+                        Console.WriteLine("Välj Lösenord tänk på den ska innehålla minst 6 tecken, minst 1 siffra, minst 1 stor bokstav, minst 1 specialtecken");
                         var passWord = Console.ReadLine();
                         
                         if (account.Register(userName, passWord))
@@ -69,7 +69,7 @@ namespace Register_LogIn
                         break;
 
                     case "2":
-                        Console.WriteLine("Skriv anvädanamn");
+                        Console.WriteLine("Skriv anvädanamn"); // har man lyckats att registerera så kan man välja att logga in 
                         var redanuserName = Console.ReadLine();
                         Console.WriteLine("Skriv in ditt lösenord");
                         var redanpassWord = Console.ReadLine();
@@ -79,7 +79,7 @@ namespace Register_LogIn
                         }
                         else
                         {
-                            Console.WriteLine("Fail to log in");
+                            Console.WriteLine("Fail to log in"); // ifall man skriver fel lösen eller namn
                         }
                         break;
 

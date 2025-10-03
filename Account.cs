@@ -10,7 +10,7 @@ public class Account
         var passwordOk = CheckPassword(passWord);
         var userNameOk = CheckUserName(userName);
 
-        if ((passwordOk && userNameOk) == false)
+        if ((passwordOk && userNameOk) == false)  
         {
             return false;
         }
